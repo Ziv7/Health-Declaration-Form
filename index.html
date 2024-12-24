@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הצהרת בריאות</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl; /* Right-to-left for Hebrew */
+    text-align: right;
+    background-color: #eaf2f8; /* Lighter background for contrast */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Added margin for spacing */
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: right;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+}
+
+th {
+    background-color: #007BFF; /* Header background color */
+    color: white;
+    font-weight: bold; /* Make the text bold */
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td input[type="radio"] {
+    margin: 0;
+}
+
+tr:hover td {
+    background-color: #e1f5fe; /* Light blue on hover */
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    background-color: #e9f7f9; /* Light teal color */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333; /* Dark grey text */
+    text-align: center; /* Center the text */
+}
+textarea {
+	width: 100%; /* Full-width */
+	height: 150px; /* Fixed height */
+	min-height: 150px; /* Minimum height */
+	max-height: 300px; /* Maximum height if desired */
+	resize: none; /* Prevent user resizing */
+	border: 1px solid #ccc; /* Consistent border */
+	border-radius: 4px; /* Keep consistent rounded corners */
+	box-sizing: border-box; /* Include padding and border in width/height */
+}
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    form {
+        padding: 20px;
+    }
+
+  }  </style>
+</head>
+<body>
+
+<h1>הצהרת בריאות</h1>
+<p>השאלון הוא סודי בהחלט ומשמש את צוות הקליניקה בלבד.</p>
+<p>הוראות: אנא ענה/י על השאלון ע"י סימון ✔ במקום המתאים בלבד. במידה וענית תשובה חיובית, אנא פרט/י ככל הניתן במקום המיועד לכך.</p>
+
+<form action="#" method="post">
+    <label for="first-name">שם פרטי:</label>
+    <input type="text" id="first-name" name="first-name" required>
+
+    <label for="last-name">שם משפחה:</label>
+    <input type="text" id="last-name" name="last-name" required>
+
+    <label for="birth-date">תאריך לידה:</label>
+    <input type="date" id="birth-date" name="birth-date" required>
+
+    <label for="id-number">ת.ז.:</label>
+    <input type="text" id="id-number" name="id-number" required>
+
+    <label for="phone">טלפון:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="gender">מין:</label>
+    <select id="gender" name="gender" required>
+        <option value="ז">ז</option>
+        <option value="נ">נ</option>
+    </select>
+
+    <label for="email">דוא"ל:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="marital-status">מצב משפחתי:</label>
+    <input type="text" id="marital-status" name="marital-status" required>
+	
+	 <label for="how-did-you-hear">איך הגעת אליי:</label>
+    <input type="text" id="how-did-you-hear" name="how-did-you-hear" required>
+
+    <label for="occupation">עיסוק:</label>
+    <input type="text" id="occupation" name="occupation" required>
+
+   
+   
+   <div class="question">
+    <label>בעיות רפואיות:</label>
+    <table class="table">
+        <tr>
+            <th>שאלה</th>
+            <th>כן</th>
+            <th>לא</th>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת בעיות גב:</td>
+            <td>
+                <input type="radio" name="current-back-issues" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="current-back-issues" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת מחלות פרקים:</td>
+            <td>
+                <input type="radio" name="current-joint-diseases" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="current-joint-diseases" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת התכווצויות שרירים:</td>
+            <td>
+                <input type="radio" name="muscle-cramps" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="muscle-cramps" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת דלקת לימפה:</td>
+            <td>
+                <input type="radio" name="lymph-inflammation" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="lymph-inflammation" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת כאבי ראש / מיגרנות:</td>
+            <td>
+                <input type="radio" name="headaches" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="headaches" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת סרטן:</td>
+            <td>
+                <input type="radio" name="cancer" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="cancer" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת סכרת:</td>
+            <td>
+                <input type="radio" name="diabetes" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="diabetes" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת בעיות שינה:</td>
+            <td>
+                <input type="radio" name="sleep-issues" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="sleep-issues" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת קצרת (אסטמה):</td>
+            <td>
+                <input type="radio" name="asthma" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="asthma" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת בעיות בבטן:</td>
+            <td>
+                <input type="radio" name="stomach-issues" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="stomach-issues" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת דלקת ריאות:</td>
+            <td>
+                <input type="radio" name="pneumonia" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="pneumonia" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת מחלות כליות:</td>
+            <td>
+                <input type="radio" name="kidney-diseases" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="kidney-diseases" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת מחלות לב וכלי דם:</td>
+            <td>
+                <input type="radio" name="heart-diseases" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="heart-diseases" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת מחלות עור:</td>
+            <td>
+                <input type="radio" name="skin-diseases" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="skin-diseases" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת לחץ דם גבוה / נמוך:</td>
+            <td>
+                <input type="radio" name="blood-pressure" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="blood-pressure" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת התעלפויות:</td>
+            <td>
+                <input type="radio" name="fainting" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="fainting" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת דיכאון / חרדות:</td>
+            <td>
+                <input type="radio" name="depression-anxiety" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="depression-anxiety" value="לא">
+            </td>
+        </tr>
+        <tr>
+            <td>האם היה לך / יש לך כעת כאב כרוני:</td>
+            <td>
+                <input type="radio" name="chronic-pain" value="כן">
+            </td>
+            <td>
+                <input type="radio" name="chronic-pain" value="לא">
+            </td>
+        </tr>
+    </table>
+</div>				
+				
+				
+   
+   	<div class="question">
+    <label>פירוט לגבי תשובות חיוביות לעיל וכל מחלה, בעיה נפשית, רפואית, ניתוחים, שברים וכדומה שאינם מופיעים בשאלון:</label>
+    <textarea name="additional-details" rows="5"></textarea>
+	</div>
+   
+   
+   
+   
+   
+
+    <label for="date">תאריך:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="signature">חתימה:</label>
+    <input type="text" id="signature" name="signature" required>
+
+    <input type="submit" value="שלח">
+	
+	
+
+	
+	<div class="alert">
+        <strong>שים/י לב! :</strong> אנא הודע/י על כל שינוי במצב בריאותך.
+    </div>
+</form>
+
+</body>
+</html>
